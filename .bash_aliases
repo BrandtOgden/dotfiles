@@ -2,11 +2,9 @@
 alias py=python3
 alias qemu=qemu-system-x86_64
 
-# Aliases specific to laptop
-alias w_home='cd /mnt/c/Users/ogden'
-alias w_downloads='cd /mnt/c/Users/ogden/Downloads'
-alias w_desktop='cd /mnt/c/Users/ogden/OneDrive/Desktop'
-alias w_212='cd "/mnt/c/Users/ogden/OneDrive/Desktop/URI/Computer Science/CSC 212/Data Structures and Algorithms/"'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # Git aliases
 alias gs='git status'
@@ -27,3 +25,9 @@ alias gcob='git checkout -b'
 
 # Open nvim config
 alias nvimc='nvim ~/.config/nvim/'
+
+# Aliases specific to my Windows paths
+alias w_home='cd /mnt/c/Users/ogden'
+alias w_downloads='cd /mnt/c/Users/ogden/Downloads'
+alias w_desktop='cd /mnt/c/Users/ogden/OneDrive/Desktop'
+alias w_212='cd "/mnt/c/Users/ogden/OneDrive/Desktop/URI/Computer Science/CSC 212/Data Structures and Algorithms/"'

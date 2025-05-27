@@ -23,7 +23,9 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.backspace = "indent,eol,start"
 
-vim.opt.clipboard:append("unnamedplus") -- use system clipboard
+vim.schedule(function()
+  vim.opt.clipboard:append("unnamedplus") -- use system clipboard
+end)
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true

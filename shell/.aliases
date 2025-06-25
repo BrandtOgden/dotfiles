@@ -5,6 +5,7 @@ alias qemu=qemu-system-x86_64
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # Git aliases
 alias gs='git status'

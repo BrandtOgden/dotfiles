@@ -13,6 +13,7 @@ alias 3='cd -3'
 alias ls='ls --color=tty'
 alias la='ls -lAh'
 alias ll='ls -lh'
+alias grep='grep --color=auto'
 
 # Git aliases
 alias gs='git status'
@@ -30,6 +31,10 @@ alias gu='git pull'
 alias gpop='git reset --soft HEAD~1'
 alias gco='git checkout'
 alias gcob='git checkout -b'
+
+gcamp() {
+    gcam "$1" && git push
+}
 
 # Configuration files
 alias nvimc='$EDITOR ~/.config/nvim/'

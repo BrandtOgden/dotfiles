@@ -24,8 +24,14 @@ alias gpop='git reset --soft HEAD~1'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 
-# Open nvim config
-alias nvimc='nvim ~/.config/nvim/'
+# Configuration files
+alias nvimc='$EDITOR ~/.config/nvim/'
+alias bashrc='$EDITOR ~/.bashrc'
+alias zshrc='$EDITOR ~/.zshrc'
+alias aliases='$EDITOR ~/.aliasrc'
+alias saliases='source ~/.aliasrc'
+alias odot='$EDITOR ~/.dotfiles'
+alias dot='cd ~/.dotfiles'
 
 # Aliases specific to my Windows paths
 alias w_home='cd /mnt/c/Users/ogden'

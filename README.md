@@ -1,4 +1,5 @@
-# Brandt's Configuration Files
+# My Configuration Files
 
-The nerd font I use is, 
-Meslo (NerdFont)
+TODO: Insert something here about the script
+
+The nerd font I use is: Meslo (NerdFont)

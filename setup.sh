@@ -21,6 +21,7 @@ STOW_DIRS=(
     nvim
     vim
     zsh
+    bash
     shell
 )
 
@@ -41,6 +42,13 @@ update_install() {
     echo "[*] Installing Rust..."
     curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
     source "$HOME/.cargo/env"
+
+    if [ ! -d "$ZSH" ]; then
+        echo "Installing Oh My Zsh..."
+        # This command might need to be changed but I think it should work good enough
+        RUNZSH=no KEEP_ZSHRC=yes \
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    fi
 }
 
 link() {

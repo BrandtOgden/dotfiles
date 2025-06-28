@@ -6,6 +6,13 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias 1='cd -1'
+alias 2='cd -2'
+alias 3='cd -3'
+
+alias ls='ls --color=tty'
+alias la='ls -lAh'
+alias ll='ls -lh'
 
 # Git aliases
 alias gs='git status'
@@ -27,9 +34,10 @@ alias gcob='git checkout -b'
 # Configuration files
 alias nvimc='$EDITOR ~/.config/nvim/'
 alias bashrc='$EDITOR ~/.bashrc'
+alias sbash='source ~/.bashrc'
 alias zshrc='$EDITOR ~/.zshrc'
+alias szsh='source ~/.zshrc'
 alias aliases='$EDITOR ~/.aliasrc'
-alias saliases='source ~/.aliasrc'
 alias odot='$EDITOR ~/.dotfiles'
 alias dot='cd ~/.dotfiles'
 

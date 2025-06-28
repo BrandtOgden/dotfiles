@@ -16,6 +16,7 @@ alias ll='ls -lh'
 alias grep='grep --color=auto'
 
 # Git aliases
+alias g='git'
 alias gs='git status'
 alias gl='git log'
 alias gb='git branch'

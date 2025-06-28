@@ -1,9 +1,4 @@
-if [[ -d "$HOME/.cargo/bin" ]]; then
-    PATH="$PATH:$HOME/.cargo/bin"
-fi
-
-if [[ -d "/opt/nvim-linux-x86_64/bin" ]]; then
-    PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-fi
+[[ -d "/opt/nvim-linux-x86_64/bin" ]] && PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+[[ -d "$HOME/.cargo/bin" ]] && PATH="$PATH:$HOME/.cargo/bin"
 
 export PATH

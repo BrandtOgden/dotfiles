@@ -1,5 +1,5 @@
 # My Configuration Files
 
-TODO: Insert something here about the script
+I use *MesloLGSNerdFontMono* as my Nerd Font that can be downloaded from [here](https://www.nerdfonts.com/font-downloads).
 
-The nerd font I use is: Meslo (NerdFont)
+To install everything (including apt packages, other applications, and configuration files), clone this repo and run `./setup.sh --all`.

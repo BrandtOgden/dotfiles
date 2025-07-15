@@ -15,6 +15,7 @@ APT_PACKAGES=(
     git
     xclip
     zsh
+    unzip
 )
 NVIM_VERSION="v0.11.2"
 STOW_DIRS=(

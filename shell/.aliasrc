@@ -51,6 +51,9 @@ alias aliases='$EDITOR ~/.aliasrc'
 alias odot='$EDITOR ~/.dotfiles'
 alias dot='cd ~/.dotfiles'
 
+# Aliases specific to my Ubuntu machine
+alias dev='cd ~/dev'
+
 # Aliases specific to my Windows paths
 alias w_home='cd /mnt/c/Users/ogden'
 alias w_downloads='cd /mnt/c/Users/ogden/Downloads'

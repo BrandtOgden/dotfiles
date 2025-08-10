@@ -26,4 +26,5 @@ vim.keymap.set("x", "<leader>d", '"_dD', { desc = "Delete current selection with
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+-- TODO: I should look into a way to not have this command go in the bottom
 vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search highlights" })

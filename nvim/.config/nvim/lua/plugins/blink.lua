@@ -1,7 +1,19 @@
 return {
   "saghen/blink.cmp",
   event = { "BufReadPre", "BufNewFile" },
-  dependencies = { "rafamadriz/friendly-snippets" },
+  dependencies = {
+    {
+      "L3MON4D3/LuaSnip",
+      version = "v2.*",
+      build = "make install_jsregexp",
+    },
+    {
+      "rafamadriz/friendly-snippets",
+      config = function()
+        require("luasnip.loaders.from_vscode").lazy_load()
+      end,
+    },
+  },
 
   -- use a release tag to download pre-built binaries
   version = "1.*",
@@ -25,11 +37,8 @@ return {
       nerd_font_variant = "mono",
     },
 
-    -- (Default) Only show the documentation popup when manually triggered
-    -- completion = { documentation = { auto_show = false } },
-
     sources = {
-      default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+      default = { "lazydev", "lsp", "snippets", "path", "buffer" },
       providers = {
         lazydev = {
           name = "LazyDev",
@@ -37,6 +46,8 @@ return {
         },
       },
     },
+
+    snippets = { preset = "luasnip" },
 
     fuzzy = { implementation = "prefer_rust_with_warning" },
 

@@ -36,6 +36,11 @@ alias gu='git pull'
 alias gpop='git reset --soft HEAD~1'
 alias gco='git checkout'
 alias gcob='git checkout -b'
+alias gr='git restore'
+
+gcmp () {
+    gcm "$1" && git push
+}
 
 gcamp() {
     gcam "$1" && git push

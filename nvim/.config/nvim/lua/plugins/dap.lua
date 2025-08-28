@@ -1,6 +1,5 @@
 return {
   "mfussenegger/nvim-dap",
-  event = { "VimEnter" },
   dependencies = {
     "rcarriga/nvim-dap-ui",
     "theHamsta/nvim-dap-virtual-text",

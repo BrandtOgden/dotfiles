@@ -116,47 +116,51 @@ return {
       },
     })
 
-    local capabilities = require("blink.cmp").get_lsp_capabilities()
-
     local servers = {
-      clangd = {},
-      pyright = {},
-      rust_analyzer = {},
-      bashls = {},
-      lua_ls = {
-        settings = {
-          Lua = {
-            completion = {
-              callSnippet = "Replace",
+      -- Mason LSPs
+      mason = {
+        clangd = {},
+        pyright = {},
+        rust_analyzer = {},
+        bashls = {},
+        lua_ls = {
+          settings = {
+            Lua = {
+              completion = {
+                callSnippet = "Replace",
+              },
+              diagnostics = { disable = { "missing-fields" } },
             },
-            diagnostics = { disable = { "missing-fields" } },
           },
         },
       },
+      -- NON Mason LSPs
+      others = {},
     }
 
     local formatters = {
       "stylua",
     }
 
-    local ensure_installed = vim.tbl_keys(servers)
+    local ensure_installed = vim.tbl_keys(servers.mason)
     vim.list_extend(ensure_installed, formatters)
     require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
+    -- Set appropriate configuration options
+    for server, config in pairs(vim.tbl_extend("keep", servers.mason, servers.others)) do
+      if not vim.tbl_isempty(config) then
+        vim.lsp.config(server, config)
+      end
+    end
+
     require("mason-lspconfig").setup({
-      ensure_installed = {},
-      automatic_installation = false,
-      automatic_enable = false,
-      handlers = {
-        function(server_name)
-          local server = servers[server_name] or {}
-          -- This handles overriding only values explicitly passed
-          -- by the server configuration above. Useful when disabling
-          -- certain features of an LSP (for example, turning off formatting for ts_ls)
-          server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-          require("lspconfig")[server_name].setup(server)
-        end,
-      },
+      ensure_installed = {}, -- Automatically populated from mason-tool-installer
+      automatic_enable = true,
     })
+
+    -- Need to manually enable other LSPs not installed through Mason
+    if not vim.tbl_isempty(servers.others) then
+      vim.lsp.enable(vim.tbl_keys(servers.others))
+    end
   end,
 }

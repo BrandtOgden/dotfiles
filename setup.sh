@@ -16,6 +16,7 @@ APT_PACKAGES=(
     xclip
     zsh
     unzip
+    tmux
 )
 NVIM_VERSION="v0.11.2"
 STOW_DIRS=(
@@ -24,6 +25,7 @@ STOW_DIRS=(
     zsh
     bash
     shell
+    tmux
 )
 
 update_install() {
@@ -45,11 +47,14 @@ update_install() {
     source "$HOME/.cargo/env"
 
     if [ ! -d "$ZSH" ]; then
-        echo "Installing Oh My Zsh..."
-        # This command might need to be changed but I think it should work good enough
+        echo "[*] Installing Oh My Zsh..."
+        # TODO: This command might need to be changed but I think it should work good enough
         RUNZSH=no KEEP_ZSHRC=yes \
             sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     fi
+
+    echo "[*] Installing TPM"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
 link() {

@@ -48,10 +48,11 @@ gcamp() {
 
 # Configuration files
 alias nvimc='$EDITOR ~/.config/nvim/'
-alias bashrc='$EDITOR ~/.bashrc'
+alias bashc='$EDITOR ~/.bashrc'
 alias sbash='source ~/.bashrc'
-alias zshrc='$EDITOR ~/.zshrc'
+alias zshc='$EDITOR ~/.zshrc'
 alias szsh='source ~/.zshrc'
+alias tmuxc='$EDITOR ~/.tmux.conf'
 alias aliases='$EDITOR ~/.aliasrc'
 alias odot='$EDITOR ~/.dotfiles'
 alias dot='cd ~/.dotfiles'

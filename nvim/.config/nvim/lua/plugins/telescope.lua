@@ -23,7 +23,7 @@ return {
     vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find Help tags" })
     vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Find Keymaps" })
     vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Find Recent files" })
-    vim.keymap.set("n", "<leader>fm", builtin.man_pages, { desc = "Find Man page entries" })
+    vim.keymap.set("n", "<leader>fa", builtin.man_pages, { desc = "Find mAn page entries" })
     vim.keymap.set("n", "<leader>fo", builtin.commands, { desc = "Find plugin/user cOmmands" })
     vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Todo comments" })
 

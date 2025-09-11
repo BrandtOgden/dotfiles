@@ -15,16 +15,21 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
--- move highlighted text
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move highlighted text down" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move highlighted text down" })
-
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste over current selection without loosing clipboard" })
 vim.keymap.set("x", "<leader>d", '"_d', { desc = "Delete current selection without loosing clipboard" })
 
--- Keep selected text after changing indentation
-vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", ">", ">gv")
+vim.keymap.set(
+  "n",
+  "[<Space>",
+  ':<C-u>put!=repeat(nr2char(10),v:count)<Bar>execute "\']+1"<CR>',
+  { desc = "Insert blankline above", silent = true }
+)
+vim.keymap.set(
+  "n",
+  "]<Space>",
+  ':<C-u>put =repeat(nr2char(10),v:count)<Bar>execute "\'[-1"<CR>',
+  { desc = "Insert blankline below", silent = true }
+)
 
 -- Random
 vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search highlights", silent = true })

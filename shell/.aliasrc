@@ -48,6 +48,7 @@ gcamp() {
 
 # Configuration files
 alias nvimc='$EDITOR ~/.config/nvim/'
+alias nviml='cd ~/.local/state/nvim'
 alias bashc='$EDITOR ~/.bashrc'
 alias bashs='source ~/.bashrc'
 alias zshc='$EDITOR ~/.zshrc'

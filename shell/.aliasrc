@@ -49,9 +49,9 @@ gcamp() {
 # Configuration files
 alias nvimc='$EDITOR ~/.config/nvim/'
 alias bashc='$EDITOR ~/.bashrc'
-alias sbash='source ~/.bashrc'
+alias bashs='source ~/.bashrc'
 alias zshc='$EDITOR ~/.zshrc'
-alias szsh='source ~/.zshrc'
+alias zshs='source ~/.zshrc'
 alias tmuxc='$EDITOR ~/.tmux.conf'
 alias aliases='$EDITOR ~/.aliasrc'
 alias odot='$EDITOR ~/.dotfiles'

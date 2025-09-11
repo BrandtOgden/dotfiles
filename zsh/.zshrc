@@ -5,11 +5,11 @@ DISABLE_MAGIC_FUNCTIONS="true" # Pasting URLs was messed up without this
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true" # Says it makes git status checks faster
 
-plugins=(history-substring-search copypath)
+plugins=(history-substring-search copypath copyfile vi-mode zsh-system-clipboard)
 
+zstyle ':omz:lib:*' aliases no # Get rid of lib predefined aliases
 source $ZSH/oh-my-zsh.sh
 
-unalias -m '*' # Don't want predefined aliases
 RPROMPT="" # Get rid of things like git diff on right side of window
 
 # User configuration

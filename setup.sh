@@ -51,6 +51,9 @@ update_install() {
         # TODO: This command might need to be changed but I think it should work good enough
         RUNZSH=no KEEP_ZSHRC=yes \
             sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+        # A custom plugin for using system clipboard with vi-mode in Zsh
+        git clone https://github.com/kutsan/zsh-system-clipboard ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-system-clipboard
     fi
 
     echo "[*] Installing TPM"

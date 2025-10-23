@@ -20,7 +20,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
   -- automatically check for plugin updates
-  checker = { enabled = true },
+  checker = { enabled = false },
   -- automatically check for config file changes and reload the ui
   change_detection = {
     enabled = true,

@@ -17,6 +17,9 @@ APT_PACKAGES=(
     zsh
     unzip
     tmux
+    texlive-base
+    latexmk
+    zathura
 )
 NVIM_VERSION="v0.11.2"
 STOW_DIRS=(
@@ -26,6 +29,7 @@ STOW_DIRS=(
     bash
     shell
     tmux
+    zathura
 )
 
 update_install() {

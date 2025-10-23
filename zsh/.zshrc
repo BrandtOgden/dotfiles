@@ -23,3 +23,8 @@ bindkey -M viins 'jk' vi-cmd-mode
 # Have j/k search through history
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+# Auto-start tmux if not already inside tmux
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach 2>/dev/null || tmux
+fi

@@ -20,7 +20,7 @@ return {
     },
     format_on_save = function(bufnr)
       -- Disable formatting on save for C/C++
-      local disabled = { c = true, cpp = true, svelte = true }
+      local disabled = { c = true, cpp = true, svelte = true, python = true }
       if disabled[vim.bo[bufnr].filetype] then
         return nil
       else

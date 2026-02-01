@@ -120,7 +120,7 @@ return {
       -- Mason LSPs
       mason = {
         clangd = {},
-        pyright = {},
+        ruff = {},
         rust_analyzer = {},
         bashls = {},
         lua_ls = {

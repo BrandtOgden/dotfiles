@@ -24,6 +24,10 @@ bindkey -M viins 'jk' vi-cmd-mode
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd 'v' edit-command-line
+
 # Auto-start tmux if not already inside tmux
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach 2>/dev/null || tmux

@@ -49,6 +49,7 @@ gcamp() {
 # Configuration files
 alias nvimc='$EDITOR ~/.config/nvim/'
 alias nviml='cd ~/.local/state/nvim'
+alias vimc='$EDITOR ~/.vimrc'
 alias bashc='$EDITOR ~/.bashrc'
 alias bashs='source ~/.bashrc'
 alias zshc='$EDITOR ~/.zshrc'
@@ -57,6 +58,9 @@ alias tmuxc='$EDITOR ~/.tmux.conf'
 alias aliases='$EDITOR ~/.aliasrc'
 alias odot='$EDITOR ~/.dotfiles'
 alias dot='cd ~/.dotfiles'
+
+# Random
+alias zathura='zathura --mode=fullscreen'
 
 # Aliases specific to my Ubuntu machine
 alias dev='cd ~/dev'

@@ -82,6 +82,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Ignore case on auto-completion
+# Note: bind used instead of sticking these in .inputrc
+if [[ $iatest > 0 ]]; then bind "set completion-ignore-case on"; fi
+
+# ============================ Keybinds ============================ 
+set -o vi
+bind '"jk":vi-movement-mode'
+bind -m vi-command '"k": history-substring-search-backward'
+bind -m vi-command '"j": history-substring-search-forward'
+bind -m vi-command '"v": edit-and-execute-command'
+
+# Load common shell configurations
 [[ -f ~/.pathrc ]] && source ~/.pathrc
 [[ -f ~/.envrc ]] && source ~/.envrc
 [[ -f ~/.aliasrc ]] && source ~/.aliasrc

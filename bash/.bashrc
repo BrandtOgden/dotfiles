@@ -92,6 +92,8 @@ bind '"jk":vi-movement-mode'
 bind -m vi-command '"k": history-substring-search-backward'
 bind -m vi-command '"j": history-substring-search-forward'
 bind -m vi-command '"v": edit-and-execute-command'
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
 
 # Load common shell configurations
 [[ -f ~/.pathrc ]] && source ~/.pathrc
